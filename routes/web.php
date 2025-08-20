@@ -45,12 +45,11 @@ Route::prefix('employers')->group(function(){
     Route::get('/', [EmployeController::class, 'index'])->name('employer.index');
 Route::get('/create', [EmployeController::class, 'create'])->name('employer.create');
 Route::get('/edit/{employer}', [EmployeController::class, 'edit'])->name('employer.edit');
-
 Route::post('/store', [EmployeController::class, 'store'])->name('employe.store');
+Route::put('/update/{employer}', [EmployeController::class, 'update'])->name('employe.update');
+Route::get('/delete/{employer}', [EmployeController::class, 'delete'])->name('employe.delete');
 
 });
-
-
 
 
 
